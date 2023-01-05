@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>rows</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <table class="table">
+      <tr>
+        {%for cell in headers%}
+        <th class="table__header">{{cell}}</th>
+        {%endfor%}
+      </tr>
+      {%for row in bookie_info%}
+      <tr class="table__row">
+        {%for cell in row%}
+        <td class="table__cell">{{cell}}</td>
+        {%endfor%}
+      </tr>
+      {%endfor%}
+    </table>
+  </body>
+</html>
